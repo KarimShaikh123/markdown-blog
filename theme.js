@@ -14,6 +14,8 @@
     var dark = document.documentElement.getAttribute("data-theme") === "dark";
     btn.setAttribute("aria-checked", dark ? "true" : "false");
     btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    var label = document.getElementById("theme-label");
+    if (label) label.textContent = dark ? "Dark" : "Light";
   }
 
   var stored = null;
