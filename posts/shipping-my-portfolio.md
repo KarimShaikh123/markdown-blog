@@ -8,18 +8,17 @@ My portfolio is live at [portfolio-site-three-kappa-31.vercel.app](https://portf
 
 ## What I built
 
-A static portfolio site — no framework, no backend. Just `index.html`, `styles.css`, and a little `script.js`. It shows four projects:
+A static portfolio site — no framework, no backend. Just `index.html`, `styles.css`, and a little `script.js`. It shows three projects:
 
-- **Unreal FPS Game** — a game project built in Unreal
-- **Lesson Planner App**
-- **Java Study Game**
+- **Unreal FPS Game** — a UE5 Blueprint prototype with FPS mechanics, scoring, HUD, and movement
 - **Portfolio Build** — a case study of the portfolio itself
+- **Lesson Planner App** — a Java / BlueJ app with subject selection, mini lessons, and quizzes
 
 I kept it plain on purpose. It's my first site, and plain HTML and CSS were the simplest thing that could work.
 
 ## Getting it on GitHub
 
-The site lives in a public GitHub repository. Every meaningful change is its own commit, so the history reads like a log of decisions:
+The site lives in a GitHub repository. Every meaningful change is its own commit, so the history reads like a log of decisions:
 
 ```
 Add process note to portfolio
