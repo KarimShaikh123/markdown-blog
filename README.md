@@ -20,3 +20,7 @@ Output lands in `dist/`. The index page lists all posts, newest first. Each post
 ## Deploy
 
 Deployed on Vercel. Build command: `npm run build`. Output directory: `dist`.
+
+## For AI agents
+
+`AGENTS.md` holds the stack, commands, pipeline details, and verification rules for this repo. Read it first and keep it updated with any structural change.
