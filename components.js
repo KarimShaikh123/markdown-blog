@@ -19,10 +19,14 @@ function pageShell({ title, description, bodyHtml, prefix }) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${prefix}styles.css">
+<script src="${prefix}theme.js"></script>
 </head>
 <body>
 <header class="site-header">
-  <a class="site-title" href="${prefix}index.html">Karim's Blog</a>
+  <div class="site-header-inner">
+    <a class="site-title" href="${prefix}index.html">Karim's Blog</a>
+    <button class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+  </div>
 </header>
 <main>
 ${bodyHtml}

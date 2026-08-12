@@ -63,6 +63,7 @@ function build() {
   fs.writeFileSync(path.join(DIST_DIR, "index.html"), html);
 
   fs.copyFileSync(path.join(ROOT, "styles.css"), path.join(DIST_DIR, "styles.css"));
+  fs.copyFileSync(path.join(ROOT, "theme.js"), path.join(DIST_DIR, "theme.js"));
 
   console.log(`Built ${posts.length} post(s) into dist/`);
 }
