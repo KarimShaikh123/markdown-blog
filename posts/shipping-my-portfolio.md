@@ -15,7 +15,7 @@ A static portfolio site — no framework, no backend. Just `index.html`, `styles
 - **Java Study Game**
 - **Portfolio Build** — a case study of the portfolio itself
 
-Keeping it plain HTML/CSS was a deliberate choice. I wanted to understand every line on the page before I reached for tooling that hides things from me.
+I kept it plain on purpose. It's my first site, and plain HTML and CSS were the simplest thing that could work.
 
 ## Getting it on GitHub
 
@@ -30,7 +30,7 @@ Add portfolio build case study
 Initial portfolio site
 ```
 
-Small commits mattered more than I expected. When something looked wrong, I could diff one commit instead of digging through a giant change.
+Small commits made life easier. When something looked wrong, I could check one small commit instead of digging through a giant change.
 
 ## Deploying with Vercel
 
@@ -40,7 +40,7 @@ Vercel serves the site straight from the repository. The setup:
 2. Import the repo in Vercel.
 3. No build command — it's static files, so Vercel serves them directly.
 
-A small `vercel.json` enables clean URLs and sets security headers. After that, every push to the repository produces a new deployment automatically.
+A small config file (`vercel.json`) keeps the URLs clean and adds a security header. After that, every push to the repository produces a new deployment automatically.
 
 ## The loop that matters
 
@@ -48,6 +48,6 @@ The whole project ran on one tight loop:
 
 > **Prompt → code → push → live URL.**
 
-Say what you want, get the code, review it, push it, open the live URL. If something is off, go around the loop again. Each pass takes minutes, not days, and every pass leaves a public artifact behind — a commit on GitHub, a deployment on Vercel.
+Say what you want, get the code, review it, push it, open the live URL. If something is off, go around the loop again. Each pass takes minutes, and every pass leaves something public to show for it — a commit on GitHub, a deployment on Vercel.
 
 That loop is the reason this blog exists. The next step is running it with an AI agent doing the typing while I do the directing — and being honest about every mistake caught along the way.

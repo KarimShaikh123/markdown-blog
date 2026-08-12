@@ -10,7 +10,7 @@ Here is what actually worked, with the real evidence from this project.
 
 ## 1. Write the spec before any code
 
-Every task started with a three-line spec: **what** gets built, **why**, and **how we accept it**. The actual spec for the build script looked like this:
+Every task started with a three-line spec: **what** gets built, **why**, and **how we accept it**. The spec for the build script looked roughly like this:
 
 > **What:** `build.js` — reads `posts/*.md`, parses frontmatter, renders via `marked`, writes `dist/index.html` + `dist/posts/<slug>.html`, copies CSS.
 > **Why:** the whole pipeline working with trivial content before investing in design or writing.
@@ -22,11 +22,11 @@ That "accept" line matters most. Without it, you cannot tell when a task is done
 
 The agent's first draft of the build script used a placeholder trick: it wrote `STYLES_PATH` into the HTML and replaced the text later. If a post ever contained the words `STYLES_PATH`, the page would break silently. The fix was a clean `prefix` parameter passed into the template.
 
-The lesson is not "agents write bugs." It is that a two-second look at a diff can catch a class of bug that tests would miss. Never commit unread.
+The lesson is not "agents write bugs." It is that a quick look at a diff can catch problems you would never find just by running the code. Never commit unread.
 
 ## 3. Verify content, not status codes
 
-This one stings. The first draft of my portfolio post linked to `portfolio-site.vercel.app` — a URL that returned HTTP 200. I called it verified. It was **someone else's website**. The agent had checked the status code and stopped there.
+This one stings. The first draft of my portfolio post linked to `portfolio-site.vercel.app` — a URL that returned HTTP 200, which looked like success. It was **someone else's website**. The agent had checked the status code and stopped there.
 
 The real URL was found by asking Vercel for the deployment aliases and checking the `<title>` tag of the page. Rule: a 200 proves a server answered. Only content proves it is *yours*.
 
@@ -50,7 +50,7 @@ Each task produced one small commit, and each commit was reviewable in seconds. 
 
 The agent wrote `marked ^12.0.0` into `package.json` from memory. One query to the npm registry showed the latest version is **18.x**. Nothing malicious — just a confident guess where a lookup cost one second.
 
-The pattern: whenever the agent states a fact (a version, a URL, an API shape), ask what it *checked* versus what it *assumed*.
+The pattern: whenever the agent states a fact — a version, a URL, anything — ask what it *checked* versus what it *assumed*.
 
 ## The loop
 
