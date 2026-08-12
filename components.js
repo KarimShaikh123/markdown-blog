@@ -25,7 +25,7 @@ function pageShell({ title, description, bodyHtml, prefix }) {
 <header class="site-header">
   <div class="site-header-inner">
     <a class="site-title" href="${prefix}index.html">Karim's Blog</a>
-    <button class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+    <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark mode"><span class="theme-toggle-knob"></span></button>
   </div>
 </header>
 <main>

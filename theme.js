@@ -12,7 +12,7 @@
     var btn = document.getElementById("theme-toggle");
     if (!btn) return;
     var dark = document.documentElement.getAttribute("data-theme") === "dark";
-    btn.textContent = dark ? "Light" : "Dark";
+    btn.setAttribute("aria-checked", dark ? "true" : "false");
     btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
   }
 
